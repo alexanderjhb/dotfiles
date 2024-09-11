@@ -1,0 +1,5 @@
+xorg
+alacritty
+bash
+i3
+vim

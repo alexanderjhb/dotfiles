@@ -6,8 +6,8 @@ set $mod mod4
 exec --no-startup-id dex --autostart --environment i3
 
 for_window [ class = "Spotify" ] fullscreen enable
-for_window [ class = "Chromium" ] fullscreen enable
-for_window [ class = "Chromium" window_role = "pop-up" ] floating enable
+for_window [ class = "Firefox" ] fullscreen enable
+for_window [ class = "Firefox" window_role = "pop-up" ] floating enable
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status

@@ -4,7 +4,7 @@ window:
     y: 10
 
 font:
-  size: 16
+  size: 30
 
 schemes:
   gruvbox_material_soft_dark: &gruvbox_material_soft_dark

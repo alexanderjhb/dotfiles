@@ -16,8 +16,16 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-input type:keyboard {
-  
+input "type:touchpad" {
+  accel_profile "flat"
+  pointer_accel 0
+}
+
+input "type:keyboard" {
+  xkb_options ctrl:nocaps
+
+  repeat_delay 250
+  repeat_rate 25
 }
 
 # Use Mouse+$mod to drag floating windows to their wanted position

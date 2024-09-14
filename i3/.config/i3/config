@@ -6,7 +6,7 @@ set $mod mod4
 exec --no-startup-id dex --autostart --environment i3
 
 for_window [ class = "Spotify" ] fullscreen enable
-for_window [ class = "Firefox" ] fullscreen enable
+for_window [ class = "Firefox" ] border pixel 0
 for_window [ class = "Firefox" window_role = "pop-up" ] floating enable
 
 # Use pactl to adjust volume in PulseAudio.
@@ -15,6 +15,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+input type:keyboard {
+  
+}
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -25,8 +29,9 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -fn 'Ubuntu Mono-30' -nb '#32302f' -nf '#d4be98' -sb '#7daea3' -sf '#282828' 
+# start dmenu (program launcher for X11)
+#bindsym $mod+d exec dmenu_run -fn 'Ubuntu Mono-30' -nb '#32302f' -nf '#d4be98' -sb '#7daea3' -sf '#282828' 
+bindsym $mod+d exec bemenu-run --fn 'Ubuntu Mono 16' --nb '#32302f' --nf '#d4be98' --ab '#32302f' --af '#d4be98' --tb '#32302f' --tf '#d4be98' --fb '#32302f' --ff '#d4be98' --hb '#7daea3' --hf '#282828 '--tf '#d4be98' --fbb '#000000' --prompt '' --fbf '#000000'
 
 # change focus
 bindsym $mod+h focus left
@@ -134,6 +139,7 @@ set $bg       #32302f
 set $grey     #665c54
 set $green    #a9b665
 set $blue     #7daea3
+set $red      #ea6962
 
 #                       brdr        bg          text    indictr     chld_brdr
 client.focused          $grey       $grey       $bg     $grey       $grey

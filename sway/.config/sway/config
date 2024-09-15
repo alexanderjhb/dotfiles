@@ -11,8 +11,8 @@ for_window [ app_id = "Firefox-esr" ] fullscreen enable
 for_window [ app_id = "Firefox-esr" window_role = "pop-up" ] floating enable
 
 # Use brightnessctl to adjust display backlight
-bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -44,8 +44,6 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (program launcher for X11)
 #bindsym $mod+d exec dmenu_run -fn 'Ubuntu Mono-30' -nb '#32302f' -nf '#d4be98' -sb '#7daea3' -sf '#282828' 
-
-# start bemenu (program launcher for Wayland)
 bindsym $mod+d exec bemenu-run --fn 'Ubuntu Mono 16' --nb '#32302f' --nf '#d4be98' --ab '#32302f' --af '#d4be98' --tb '#32302f' --tf '#d4be98' --fb '#32302f' --ff '#d4be98' --hb '#7daea3' --hf '#282828 '--tf '#d4be98' --fbb '#000000' --prompt '' --fbf '#000000'
 
 # change focus

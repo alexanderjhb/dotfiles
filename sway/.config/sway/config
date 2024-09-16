@@ -10,6 +10,12 @@ exec systemctl --user import-environment WAYLAND_DISPLAY SWAYSOCK I3SOCK XCURSOR
 for_window [ app_id = "Firefox-esr" ] fullscreen enable 
 for_window [ app_id = "Firefox-esr" window_role = "pop-up" ] floating enable
 
+# Save selected screenshot
+bindsym $mod+Shift+p exec grimshot save area
+
+# Copy selected screenshot
+bindsym $mod+p exec grimshot copy area
+
 # Use brightnessctl to adjust display backlight
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-

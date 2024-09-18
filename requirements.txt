@@ -3,3 +3,4 @@ sway
 brightnessctl
 bemenu
 stow
+grimshot

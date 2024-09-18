@@ -1,5 +1,5 @@
-xorg
 alacritty
-bash
-i3
-vim
+sway
+brightnessctl
+bemenu
+stow

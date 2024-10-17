@@ -7,8 +7,8 @@ exec --no-startup-id dex --autostart --environment i3
 
 exec systemctl --user import-environment WAYLAND_DISPLAY SWAYSOCK I3SOCK XCURSOR_SIZE
 
-for_window [ app_id = "Firefox-esr" ] border none
-for_window [ app_id = "Firefox-esr" window_role = "pop-up" ] floating enable
+for_window [ app_id = "firefox-esr" ] border none
+for_window [ app_id = "firefox-esr" window_role = "pop-up" ] floating enable
 
 # Save selected screenshot
 bindsym $mod+Shift+p exec grimshot save area

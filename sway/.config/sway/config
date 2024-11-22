@@ -1,6 +1,9 @@
 default_border pixel 3
 set $mod mod4
 
+# Set wallpaper colour
+output * bg #32302f solid_color
+
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -50,6 +53,8 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (program launcher for X11)
 #bindsym $mod+d exec dmenu_run -fn 'Ubuntu Mono-30' -nb '#32302f' -nf '#d4be98' -sb '#7daea3' -sf '#282828' 
+
+# start bemenu (program launcher for Wayland)
 bindsym $mod+d exec bemenu-run --fn 'Ubuntu Mono 16' --nb '#32302f' --nf '#d4be98' --ab '#32302f' --af '#d4be98' --tb '#32302f' --tf '#d4be98' --fb '#32302f' --ff '#d4be98' --hb '#7daea3' --hf '#282828 '--tf '#d4be98' --fbb '#000000' --prompt '' --fbf '#000000'
 
 # change focus

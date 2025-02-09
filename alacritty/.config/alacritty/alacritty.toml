@@ -23,7 +23,7 @@ background = "0x32302f"
 foreground = "0xd4be98"
 
 [font]
-size = 18
+size = 16
 
 [window.padding]
 x = 8

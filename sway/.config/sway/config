@@ -56,7 +56,7 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec dmenu_run -fn 'Ubuntu Mono-30' -nb '#32302f' -nf '#d4be98' -sb '#7daea3' -sf '#282828' 
 
 # start bemenu (program launcher for Wayland)
-bindsym $mod+d exec bemenu-run -b --prompt '~' --fn 'Ubuntu Mono 16' --tb '#32302f' --tf '#d4be98' --fb '#32302f' --ff '#d4be98' --cf '#d4be98' --nb '#32302f' --nf '#d4be98' --ab '#32302f' --af '#d4be98' --hb '#a9b665' --hf '#282828' --sf '#ff0000' --hp 6 --line-height 27
+bindsym $mod+d exec bemenu-run -b --prompt '~' --fn 'Ubuntu Mono 16' --tb '#32302f' --tf '#d4be98' --fb '#32302f' --ff '#d4be98' --cf '#d4be98' --nb '#32302f' --nf '#d4be98' --ab '#32302f' --af '#d4be98' --hb '#7daea3' --hf '#282828' --hp 6 --line-height 27
 
 # change focus
 bindsym $mod+h focus left
@@ -160,20 +160,22 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $light    #d4be98
-set $bg       #32302f
-set $grey     #665c54
-set $green    #a9b665
-set $blue     #7daea3
-set $red      #ea6962
+set $black   #282828
+set $dark    #32302f
+set $light   #45403d
+set $blue    #7daea3
+set $green   #a9b665
+set $cyan    #89b482
+set $magenta #d3869b
+set $red     #ea6962
+set $white   #d4be98
+set $yellow  #d8a657
 
 #                       brdr        bg          text    indictr     chld_brdr
-client.focused          $grey       $grey       $bg     $grey       $grey
-client.focused_inactive $bg         $bg         $bg     $bg         $bg
-client.unfocused        $bg         $bg         $bg     $bg         $bg
-client.urgent           $red        $red        $bg     $red        $red
-client.placeholder      $bg         $bg         $bg     $bg         $bg
-client.background       $bg
+client.focused          $dark       $dark       $dark   $light      $light
+client.focused_inactive $dark       $dark       $dark   $dark       $dark
+client.unfocused        $dark       $dark       $dark   $dark       $dark
+client.urgent           $dark       $dark       $dark   $red        $red
 
 #
 # Status Bar:
@@ -188,9 +190,11 @@ bar {
     status_command while date +'%A %-d %b %Y  %-I:%M %p'; do sleep 1; done
 
     colors {
-        statusline $light
-        background $bg
-        focused_workspace $green $green $bg
-        inactive_workspace $bg $bg $green
+        statusline         $white
+        background         $dark
+        focused_workspace  $green $green $dark
+        inactive_workspace $dark $dark $green
+        urgent_workspace   $red $red $dark
+        binding_mode       $blue $blue $dark
     }
 }

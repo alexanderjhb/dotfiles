@@ -189,6 +189,8 @@ bar {
     # The default just shows the current date and time.
     status_command while date +'%A %-d %b %Y  %-I:%M %p'; do sleep 1; done
 
+    tray_output none
+
     colors {
         statusline         $white
         background         $dark

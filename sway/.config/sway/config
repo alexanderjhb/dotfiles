@@ -197,6 +197,6 @@ bar {
         focused_workspace  $green $green $dark
         inactive_workspace $dark $dark $green
         urgent_workspace   $red $red $dark
-        binding_mode       $blue $blue $dark
+        binding_mode       $magenta $magenta $dark
     }
 }

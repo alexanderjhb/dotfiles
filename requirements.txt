@@ -1,6 +1,8 @@
 alacritty
 sway
+swaybg
 brightnessctl
 bemenu
 stow
 grimshot
+firefox

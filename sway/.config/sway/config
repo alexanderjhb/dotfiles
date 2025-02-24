@@ -1,5 +1,3 @@
-default_border pixel 4
-
 set $mod Mod4
 
 # Set wallpaper colour
@@ -11,8 +9,8 @@ exec --no-startup-id dex --autostart --environment i3
 
 exec systemctl --user import-environment WAYLAND_DISPLAY SWAYSOCK I3SOCK XCURSOR_SIZE
 
-for_window [ app_id = "firefox" ] border none
-for_window [ app_id = "firefox" window_role = "pop-up" ] floating enable
+default_border none
+for_window [ app_id = "Alacritty" ] border pixel 4
 
 # Save selected screenshot
 bindsym $mod+Shift+p exec grimshot save area
